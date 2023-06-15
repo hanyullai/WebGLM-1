@@ -8,6 +8,7 @@ This is official implementation of WebGLM. And the table of contents is shown be
 
 https://github.com/THUDM/WebGLM/assets/129033897/d2e1dd35-6340-4175-ac2d-fd585daa17cf
 
+*Read this in [中文](README_zh.md).*
 
 
 <!-- TOC -->
