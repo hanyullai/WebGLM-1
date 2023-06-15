@@ -1,8 +1,8 @@
-<h1>WebGLM:基于人类偏好的高效网络增强问答系统</h1>
+<h1>WebGLM: 基于人类偏好的高效网络增强问答系统</h1>
 
 <p align="center">📃 <a href="https://arxiv.org/pdf/2306.07906.pdf" target="_blank">论文 (KDD 2023)</a>
 
-本项目为WebGLM的官方实现，以下是我们的目录。
+本项目为WebGLM的官方实现。
 
 https://github.com/THUDM/WebGLM/assets/129033897/d2e1dd35-6340-4175-ac2d-fd585daa17cf
 
@@ -24,7 +24,7 @@ https://github.com/THUDM/WebGLM/assets/129033897/d2e1dd35-6340-4175-ac2d-fd585da
     -   [训练生成器](#训练生成器)
         -   [准备数据](#准备数据)
         -   [训练](#训练)
-    -   [训练检索器](#训练Retriever)
+    -   [训练检索器](#训练检索器)
         -   [准备数据](#准备数据-1)
         -   [训练](#训练-1)
 -   [评测](#评测)
@@ -35,13 +35,13 @@ https://github.com/THUDM/WebGLM/assets/129033897/d2e1dd35-6340-4175-ac2d-fd585da
 
 ![paper](./assets/main_process.png)
 
-WebGLM旨在使用10亿参数的通用语言模型（GLM）提供一种高效且费用低廉的网络增强问答系统。它旨在通过将网络搜索和召回功能集成到预训练的语言模型中以进行实际应用的部署。
+WebGLM旨在使用10亿参数的通用语言模型（GLM）提供一种高效且低成本的网络增强问答系统。它旨在通过将网络搜索和召回功能集成到预训练的语言模型中以进行实际应用的部署。
 
 ## 特点
 
--   **LLM增强检索器**：增强了相关网络内容的检索能力，以更好地帮助准确回答问题。
--   **引导生成器**：根据GLM的能力生成人类般的回复，提供详细的答案。
--   **基于人类偏好的评分器**：通过优先考虑人类偏好来评估生成回复的质量，确保系统能够产生有用和吸引人的内容。
+-   **大模型增强检索器**：增强了相关网络内容的检索能力，以更好地准确回答问题。
+-   **自举生成器**：利用GLM的能力为问题生成回复，提供详细的答案。
+-   **基于人类偏好的打分器**：通过优先考虑人类偏好来评估生成回复的质量，确保系统能够产生有用和吸引人的内容。
 
 # 开发准备
 
@@ -65,7 +65,7 @@ apt install nodejs # 如果你使用Ubuntu
 playwright install
 ```
 
-如果你的主机中没有安装浏览器环境，则需要安装。不用担心，如果是这种情况，playwright会在你首次执行时出现说明。
+如果你的主机中没有安装浏览器环境，则需要安装。不用担心，如果是这种情况，playwright会在首次执行时出现说明。
 
 ## 准备SerpAPI密钥
 
@@ -99,7 +99,7 @@ python download.py retriever-pretrained-checkpoint
 export WEBGLM_RETRIEVER_CKPT=./download/retriever-pretrained-checkpoint
 ```
 
-## 作为命令行界面运行
+## 以命令行界面运行
 
 你可以尝试WebGLM-2B模型：
 
@@ -114,7 +114,7 @@ python cli_demo.py
 ```
 
 
-## 作为Web服务运行
+## 以Web服务运行
 
 你可以尝试WebGLM-2B模型：
 
